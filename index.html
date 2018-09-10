@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id" xml:lang="id" xmlns="http://www.w3.org/1999/xhtml">
+    <head profile="http://www.w3.org/2005/10/profile">
+        <style>
+            * { box-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box; }
+            body { width: 100%; height: 100%; padding: 30px; margin: 0; }
+            html, #poinIframe { margin: 0; padding: 0; }
+            hr {border: none; margin-bottom: 20px;}
+            .no-margin { margin: 0; }
+        </style>
+        <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=EDGE"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="./assets/images/gpoin32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="./assets/images/gpoin16.png" sizes="16x16">
+        <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./assets/css/font-awesome.min.css" rel="stylesheet">
+        <link href="./assets/css/ionicons.min.css" rel="stylesheet">
+        <link href="./assets/css/animate.min.css" rel="stylesheet">
+        <link href="./assets/css/simplify.min.css" rel="stylesheet">
+		<title>Getting Started with GPoin</title>
+		<noscript>
+			This site requires Javascript. Please enable Javascript in your browser for this site.
+		</noscript>
+    </head>
+    
+	<body>
+        <link rel="preconnect" href="https://fonts.googleapis.com/css?family=Roboto:400,500,600,700" rel="stylesheet" crossorigin>
+        <div class="wrapper front-end-wrapper">
+            <header class="navbar front-end-navbar" data-spy="affix" data-offset-top="1">
+                <div class="container">
+                    <div class="navbar-header text-center">
+                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="#" class="navbar-brand" style="min-width:60px;padding-left:40px;font-weight:bold;color:#000;font-size:14pt;background:url('assets/images/gpoin48.png') no-repeat left center">POIN</a>
+                    </div>
+                    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="#frontendSection">FrontEnd API</a>
+                            </li>
+                            <li>
+                                <a href="#backendSection">BackEnd API</a>
+                            </li>
+                            <!-- <li>
+                                <a href="#teamSection">Our Team</a>
+                            </li> -->
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <!-- <div class="section bg-grey section-padding" id="titleSection">
+                <div class="container">
+                    <div class="text-center">
+                        <h3 class="text-upper no-m-top text-success">GPOIN REWARDS SYSTEM</h3>
+                        <p>Getting Started with our application.<br/><br/>This is the <a href="demo"><b>SAMPLE DEMO</b></a>.</p>
+                    </div>
+                </div>
+            </div> -->
+            <div class="section bg-grey section-padding" id="frontendSection"></div>
+            <div class="section bg-dark-blue section-padding" id="backendSection"></div>
+            <footer class="front-end-footer" id="footerSection"></footer>
+        </div>
+    </body>
+    <script src="./assets/js/jquery-1.11.1.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery.slimscroll.min.js"></script>
+    <script src="./assets/js/simplify.min.js"></script>
+    <script> 
+        $(function() {
+            $("#frontendSection").load("frontend_doc.html");
+            $("#backendSection").load("backend_doc.html");
+            $("#footerSection").load("footer.html");
+        });
+    </script> 

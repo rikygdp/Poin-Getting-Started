@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id" xml:lang="id" xmlns="http://www.w3.org/1999/xhtml">
+    <head profile="http://www.w3.org/2005/10/profile">
+        <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=EDGE"/>
+		<title>Your Site Title</title>
+    </head>
+    <style>
+        html { height: 100%; width: 100% }
+        body { width: 100vw; height: 100vh; }
+        html,body,#poinIframe { margin: 0; padding: 0; }
+    </style>
+	<body>
+        <!-- Create an element for GPoin Widgets -->
+        <div id="poinIframe"></div>
+    </body>
+    <!-- <script src="https://d2r1w7pet7o54f.cloudfront.net/webapp/sdk/stgpoin.sdk.min.js"></script> -->
+    <script type="text/javascript" src="https://d2r1w7pet7o54f.cloudfront.net/webapp/sdk/staging.gpoin-1.0.2.min.js"></script>
+    <script>
+        createIntegratePoin({
+            ps_id: "616990554648", // Required!
+            target_id: "poinIframe", // Required!
+            width: "100%", // Optional, Default 100%
+            user_id: "your@domain.com",
+            //height: "500px", // Optional, Default = 100vh
+            //header_height: 50, // Optional, Default = 0
+            client_name: "Womantalk", // Required!
+            client_domain: "https://womantalk.com" // Required!
+        });
+    </script>
+</html>

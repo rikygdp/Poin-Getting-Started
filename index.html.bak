@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="id" xml:lang="id" xmlns="http://www.w3.org/1999/xhtml">
+    <head profile="http://www.w3.org/2005/10/profile">
+        <style>
+            * { box-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box; }
+            body { width: 100%; height: 100%; padding: 30px; margin: 0; }
+            html, #poinIframe { margin: 0; padding: 0; }
+            hr {border: none; margin-bottom: 20px;}
+            .no-margin { margin: 0; }
+        </style>
+        <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=EDGE"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="./assets/images/gpoin32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="./assets/images/gpoin16.png" sizes="16x16">
+        <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./assets/css/font-awesome.min.css" rel="stylesheet">
+        <link href="./assets/css/ionicons.min.css" rel="stylesheet">
+        <link href="./assets/css/animate.min.css" rel="stylesheet">
+        <link href="./assets/css/simplify.min.css" rel="stylesheet">
+		<title>Getting Started with GPoin</title>
+		<noscript>
+			This site requires Javascript. Please enable Javascript in your browser for this site.
+		</noscript>
+    </head>
+    
+	<body>
+        <link rel="preconnect" href="https://fonts.googleapis.com/css?family=Roboto:400,500,600,700" rel="stylesheet" crossorigin>
+        <div class="wrapper front-end-wrapper">
+            <header class="navbar front-end-navbar" data-spy="affix" data-offset-top="1">
+                <div class="container">
+                    <div class="navbar-header text-center">
+                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="#" class="navbar-brand" style="min-width:60px;padding-left:40px;font-weight:bold;color:#000;font-size:14pt;background:url('assets/images/gpoin48.png') no-repeat left center">POIN</a>
+                    </div>
+                    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="#frontendSection">FrontEnd API</a>
+                            </li>
+                            <li>
+                                <a href="#backendSection">BackEnd API</a>
+                            </li>
+                            <!-- <li>
+                                <a href="#teamSection">Our Team</a>
+                            </li> -->
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <!-- <div class="section bg-grey section-padding" id="titleSection">
+                <div class="container">
+                    <div class="text-center">
+                        <h3 class="text-upper no-m-top text-success">GPOIN REWARDS SYSTEM</h3>
+                        <p>Getting Started with our application.<br/><br/>This is the <a href="demo"><b>SAMPLE DEMO</b></a>.</p>
+                    </div>
+                </div>
+            </div> -->
+                
+            <div class="section bg-grey section-padding" id="frontendSection">
+                <div class="container">
+                    <div class="text-center">
+                        <h2 class="text-upper no-m-top text-success">FRONTEND API</h2>
+                        <h4>Let&apos;s get started your Client Side web applications.</h4>
+                        <a href="demo">Take a look for our <b>Sample Demo</b></a>
+                    </div>
+
+                    <div class="smart-widget m-top-lg widget-green">
+                        <div class="smart-widget-header">
+                            <b>JavaScript API</b>
+                            <span class="smart-widget-option">
+                                <a href="#" class="widget-toggle-hidden-option">
+                                        <i class="fa fa-cog"></i>
+                                </a>
+                                <a href="#" class="widget-collapse-option" data-toggle="collapse">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                            </span>
+                        </div>
+                        <div class="smart-widget-inner">
+                            <div class="smart-widget-hidden-section" style="display: none;">
+                                <ul class="widget-color-list clearfix">
+                                    <li style="background-color:#20232b;" data-color="widget-dark"></li>
+                                    <li style="background-color:#4c5f70;" data-color="widget-dark-blue"></li>
+                                    <li style="background-color:#23b7e5;" data-color="widget-blue"></li>
+                                    <li style="background-color:#2baab1;" data-color="widget-green"></li>
+                                    <li style="background-color:#edbc6c;" data-color="widget-yellow"></li>
+                                    <li style="background-color:#fbc852;" data-color="widget-orange"></li>
+                                    <li style="background-color:#e36159;" data-color="widget-red"></li>
+                                    <li style="background-color:#7266ba;" data-color="widget-purple"></li>
+                                    <li style="background-color:#f5f5f5;" data-color="widget-light-grey"></li>
+                                    <li style="background-color:#fff;" data-color="reset"></li>
+                                </ul>
+                            </div>
+                            <div class="smart-widget-body">
+                                <h4 class="m-top-sm p-bottom-md">Development</h4>
+                                <pre>&lt;script type="text/javascript" src="https://d2r1w7pet7o54f.cloudfront.net/webapp/sdk/stgpoin.sdk.min.js"&gt;&lt;/script&gt;</pre>
+                            </div>
+
+                            <div class="smart-widget-body">
+                                <h4 class="m-top-sm p-bottom-md">Production</h4>
+                                <label class="p-bottom-sm">Version 1.0.1</label>
+                                <pre>&lt;script type="text/javascript" src="https://d2r1w7pet7o54f.cloudfront.net/webapp/sdk/gpoin-1.0.1.min.js"&gt;&lt;/script&gt;</pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="smart-widget m-top-lg widget-green">
+                        <div class="smart-widget-header">
+                            <b>JavaScript Codes</b>
+                            <span class="smart-widget-option">
+                                <a href="#" class="widget-toggle-hidden-option">
+                                    <i class="fa fa-cog"></i>
+                                </a>
+                                <a href="#" class="widget-collapse-option" data-toggle="collapse">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                            </span>
+                        </div>
+                        <div class="smart-widget-inner">
+                            <div class="smart-widget-hidden-section" style="display: none;">
+                                    <ul class="widget-color-list clearfix">
+                                        <li style="background-color:#20232b;" data-color="widget-dark"></li>
+                                        <li style="background-color:#4c5f70;" data-color="widget-dark-blue"></li>
+                                        <li style="background-color:#23b7e5;" data-color="widget-blue"></li>
+                                        <li style="background-color:#2baab1;" data-color="widget-green"></li>
+                                        <li style="background-color:#edbc6c;" data-color="widget-yellow"></li>
+                                        <li style="background-color:#fbc852;" data-color="widget-orange"></li>
+                                        <li style="background-color:#e36159;" data-color="widget-red"></li>
+                                        <li style="background-color:#7266ba;" data-color="widget-purple"></li>
+                                        <li style="background-color:#f5f5f5;" data-color="widget-light-grey"></li>
+                                        <li style="background-color:#fff;" data-color="reset"></li>
+                                    </ul>
+                                </div>
+                            <div class="smart-widget-body">
+                                <h4 class="m-top-sm p-bottom-md">Initialize API</h4>
+                                <pre><code style="float:left;">&lt;script type="text/javascript"&gt;</code>
+                                    <code style="float:left;">  createIntegratePoin({</code>
+                                    <code style="float:left;">      ps_id: "685378368911",</code>
+                                    <code style="float:left;">      email: "user@domain.com",</code>
+                                    <code style="float:left;">      target_id: "poinIframe",</code>
+                                    <code style="float:left;">      client_name: "your registered name",</code>
+                                    <code style="float:left;">      client_domain: "https://yourdomain.com"</code>
+                                    <code style="float:left;">  });</code>
+                                    <code style="float:left;">&lt;/script&gt;</code></pre>
+                            </div>
+                            <div class="smart-widget-body">
+                                <h4 class="m-top-sm p-bottom-md">API Options</h4>
+                                <table class="table table-bordered font-16">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-md-6 bg-grey">Code</th>
+                                            <th class="col-md-1 text-center  bg-grey">Type</th>
+                                            <th class="col-md-1 text-center  bg-grey">Required</th>
+                                            <th class="bg-grey"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>ps_id</td>
+                                            <td class="text-center">String</td>
+                                            <td class="text-center">Yes</td>
+                                            <td>Integrated POIN SYSTEM ID for each user,<br/><i>example <b>'123412341234'</b>,</i> and it&apos;s required.<br/>To get this ID you should registered as our partner.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>user_id</td>
+                                            <td class="text-center">String</td>
+                                            <td class="text-center">Yes</td>
+                                            <td>Your user email address or social id.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>target_id</td>
+                                            <td class="text-center">String</td>
+                                            <td class="text-center">Yes</td>
+                                            <td>Your created element id,<br/><i>example <b>&lt;div id='YourIds'&gt;&lt;/div&gt;</b></i>,<br/>set the target_id as <b>'YourIds'</b>.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>client_name</td>
+                                            <td class="text-center">String</td>
+                                            <td class="text-center">Yes</td>
+                                            <td>Your registered company name with us.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>client_domain</td>
+                                            <td class="text-center">String</td>
+                                            <td class="text-center">Yes</td>
+                                            <td>Your website domain that used our SDK.<br/><i>example 'https://yourdomain.com'.</i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>width</td>
+                                            <td class="text-center">String</td>
+                                            <td class="text-center">No</td>
+                                            <td>Will set the iframe width, the default value is '100%' if not set.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>height</td>
+                                            <td class="text-center">String</td>
+                                            <td class="text-center">No</td>
+                                            <td>Will set the iframe height, the default value is '100vh' if not set.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>header_height</td>
+                                            <td class="text-center">Integer</td>
+                                            <td class="text-center">No</td>
+                                            <td>If you have the header to show, you can set this with the same height of your header.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section bg-dark-blue section-padding" id="backendSection">
+                <div class="container">
+                    <div class="text-center">
+                        <h2 class="text-upper no-m-top text-white">BACKEND API</h2>
+                        <h4>Let&apos;s integrate your Server Side with us.</h4>
+                    </div>
+                    <div class="smart-widget m-top-lg widget-dark">
+                        <div class="smart-widget-header">
+                            <b>How to get PSID ?</b>
+                            <span class="smart-widget-option">
+                                <a href="#" class="widget-toggle-hidden-option">
+                                    <i class="fa fa-cog"></i>
+                                </a>
+                                <a href="#" class="widget-collapse-option" data-toggle="collapse">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                            </span>
+                        </div>
+                        <div class="smart-widget-inner text-dark">
+                            <div class="smart-widget-hidden-section" style="display: none;">
+                                <ul class="widget-color-list clearfix">
+                                    <li style="background-color:#20232b;" data-color="widget-dark"></li>
+                                    <li style="background-color:#4c5f70;" data-color="widget-dark-blue"></li>
+                                    <li style="background-color:#23b7e5;" data-color="widget-blue"></li>
+                                    <li style="background-color:#2baab1;" data-color="widget-green"></li>
+                                    <li style="background-color:#edbc6c;" data-color="widget-yellow"></li>
+                                    <li style="background-color:#fbc852;" data-color="widget-orange"></li>
+                                    <li style="background-color:#e36159;" data-color="widget-red"></li>
+                                    <li style="background-color:#7266ba;" data-color="widget-purple"></li>
+                                    <li style="background-color:#f5f5f5;" data-color="widget-light-grey"></li>
+                                    <li style="background-color:#fff;" data-color="reset"></li>
+                                </ul>
+                            </div>
+                            <div class="smart-widget-body">
+                                <h2 class="m-top-sm p-bottom-sm">Generate PSID by Social Media ID</h2>
+                                <p class="font-16">Used to generate PSID for consumer who register through social media on your system, so that can use Poin System</p>
+                                <h5 class="m-top-md p-bottom-sm">URL</h5>
+                                <pre>{{base_url}}/api/v1/consumer/add_by_socialmedia</pre>
+                                <h5 class="m-top-md p-bottom-sm">METHOD</h5>
+                                <pre>POST</pre>
+                                <h5 class="m-top-md p-bottom-sm">REQUEST BODY</h5>
+                                <table class="table table-bordered font-16">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-md-6 bg-grey">Names</th>
+                                            <th class="col-md-1 text-center  bg-grey">Type</th>
+                                            <th class="bg-grey"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>name</td>
+                                            <td class="text-center">String</td>
+                                            <td>The name be used to consumer.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>social_media_type</td>
+                                            <td class="text-center">String</td>
+                                            <td>The type of social media used by consumers that registered in your system and it is required.<br/><i>example <b>‘facebook’.</b></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>social_media_id</td>
+                                            <td class="text-center">String</td>
+                                            <td>This is the id from social media owned by the consumer that registered in your system and it is required.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="smart-widget m-top-lg widget-dark">
+                        <div class="smart-widget-header">
+                            <b>How to update User Profile ?</b>
+                            <span class="smart-widget-option">
+                                <a href="#" class="widget-toggle-hidden-option">
+                                    <i class="fa fa-cog"></i>
+                                </a>
+                                <a href="#" class="widget-collapse-option" data-toggle="collapse">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                            </span>
+                        </div>
+                        <div class="smart-widget-inner text-dark">
+                            <div class="smart-widget-hidden-section" style="display: none;">
+                                <ul class="widget-color-list clearfix">
+                                    <li style="background-color:#20232b;" data-color="widget-dark"></li>
+                                    <li style="background-color:#4c5f70;" data-color="widget-dark-blue"></li>
+                                    <li style="background-color:#23b7e5;" data-color="widget-blue"></li>
+                                    <li style="background-color:#2baab1;" data-color="widget-green"></li>
+                                    <li style="background-color:#edbc6c;" data-color="widget-yellow"></li>
+                                    <li style="background-color:#fbc852;" data-color="widget-orange"></li>
+                                    <li style="background-color:#e36159;" data-color="widget-red"></li>
+                                    <li style="background-color:#7266ba;" data-color="widget-purple"></li>
+                                    <li style="background-color:#f5f5f5;" data-color="widget-light-grey"></li>
+                                    <li style="background-color:#fff;" data-color="reset"></li>
+                                </ul>
+                            </div>
+                            <div class="smart-widget-body">
+                                <p class="font-16">Used to make changes of the consumer profile if consumer wants to change the name and email or one of them. Changes can not be made by the consumer with unverified email address and to do it, you must be login.</p>
+                                <h5 class="m-top-md p-bottom-sm">URL</h5>
+                                <pre>{{base_url}}/web/api/v1/consumer/profile</pre>
+                                <h5 class="m-top-md p-bottom-sm">METHOD</h5>
+                                <pre>POST</pre>
+                                <h5 class="m-top-md p-bottom-sm">REQUEST BODY</h5>
+                                <table class="table table-bordered font-16">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-md-6 bg-grey">Names</th>
+                                            <th class="col-md-1 text-center  bg-grey">Type</th>
+                                            <th class="bg-grey"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>name</td>
+                                            <td class="text-center">String</td>
+                                            <td>Set it be your name. This is an optional data,<br/>if you don&apos;t want to update the user name, you don&apos;t have to include this data in the API.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>email</td>
+                                            <td class="text-center">String</td>
+                                            <td>Set it be your email. This is an optional data.<br/>The updated email should verified first in your application.</b></i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <footer class="front-end-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <address class="m-top-md">
+                                <strong>PT. GLOBAL VISI MEDIA</strong><br>
+                                Wisma 77, Tower 2 - 9th Floor, Jendral S. Parman street - Kav. 77<br>
+                                Slipi - West Jakarta, Indonesia<br>
+                            </address>
+                        </div><!-- ./col -->
+                    </div><!-- ./row -->
+                </div><!-- ./container -->
+            </footer>
+        </div>
+    </body>
+    <script src="./assets/js/jquery-1.11.1.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery.slimscroll.min.js"></script>
+    <script src="./assets/js/simplify.min.js"></script>
+</html>

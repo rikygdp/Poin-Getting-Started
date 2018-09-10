@@ -1,0 +1,737 @@
+<div class="container">
+    <div class="text-center">
+        <h2 class="text-upper no-m-top text-white">BACKEND API</h2>
+        <h4>Let&apos;s integrate your Server Side with us.</h4>
+    </div>
+    <div class="smart-widget m-top-lg widget-dark">
+        <div class="smart-widget-header">
+            <b>How to Connect our Backend API? </b>
+            <span class="smart-widget-option">
+                <a href="#" class="widget-toggle-hidden-option">
+                    <i class="fa fa-cog"></i>
+                </a>
+                <a href="#" class="widget-collapse-option" data-toggle="collapse">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+            </span>
+        </div>
+        <div class="smart-widget-inner text-dark">
+            <div class="smart-widget-hidden-section" style="display: none;">
+                <ul class="widget-color-list clearfix">
+                    <li style="background-color:#20232b;" data-color="widget-dark"></li>
+                    <li style="background-color:#4c5f70;" data-color="widget-dark-blue"></li>
+                    <li style="background-color:#23b7e5;" data-color="widget-blue"></li>
+                    <li style="background-color:#2baab1;" data-color="widget-green"></li>
+                    <li style="background-color:#edbc6c;" data-color="widget-yellow"></li>
+                    <li style="background-color:#fbc852;" data-color="widget-orange"></li>
+                    <li style="background-color:#e36159;" data-color="widget-red"></li>
+                    <li style="background-color:#7266ba;" data-color="widget-purple"></li>
+                    <li style="background-color:#f5f5f5;" data-color="widget-light-grey"></li>
+                    <li style="background-color:#fff;" data-color="reset"></li>
+                </ul>
+            </div>
+            <div class="smart-widget-body">
+                <h2 class="m-top-sm p-bottom-sm">Request Access Token</h2>
+                <p class="font-16">Used to get Access Token</p>
+                <h5 class="m-top-md p-bottom-sm">URL</h5>
+                <pre>{{base_url}}/auth/login</pre>
+                <h5 class="m-top-md p-bottom-sm">METHOD</h5>
+                <pre>POST</pre>
+                <h5 class="m-top-md p-bottom-sm">HEADERS</h5>
+                <table class="table table-bordered font-16">
+                    <thead>
+                        <tr>
+                            <th class="col-md-1 bg-grey">Key</th>
+                            <th class="col-md-1 text-center bg-grey">Value</th>
+                            <th class="col-md-1 text-center bg-grey">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Authorization</td>
+                            <td><strong>Basic [Base64Credential]</strong></td>
+                            <td> - <strong>Basic Authentication</strong> = Clients send it’s Base64 encoded credentials with each request, using HTTP [Authorization] header<br>- <strong>Format (Before Encoded) </strong> = <i><u>ClientId:ClientSecret</u></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <strong><u>*For client id and secret registration please contact GPoin Team.</u></strong> 
+                <h5 class="m-top-md p-bottom-sm">REQUEST BODY</h5>
+                <table class="table table-bordered font-16">
+                    <thead>
+                        <tr>
+                            <th class="col-md-1 bg-grey">Names</th>
+                            <th class="col-md-1 text-center  bg-grey">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>grant_type</td>
+                            <td>client_credentials</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h5 class="m-top-md p-bottom-sm">RESPONSES</h5>
+                <table class="table table-bordered font-16">
+                    <thead>
+                        <tr>
+                            <th class="col-md-1 bg-grey">HTTP Status</th>
+                            <th class="col-md-2 bg-grey">Description</th>
+                            <th class="col-md-3 bg-grey">JSON Response</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>200</td>
+                            <td><strong>Success</strong></td>
+                            <td>
+                                <code>
+                                    {<br>&nbsp;&nbsp;"access_token": "1234567A-1234-1234-123s-1234567890we",<br>&nbsp;&nbsp;"token_type": "bearer",<br>&nbsp;&nbsp;"expires_in": 25234683,<br>&nbsp;&nbsp;"scope": "read write client",<br>&nbsp;&nbsp;"auth_name": "[CLIENT NAME]"<br>}      
+                                </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>401</td>
+                            <td><strong>Unauthorized</strong></td>
+                            <td>
+                                <code>
+                                    {<br>&nbsp;&nbsp;"timestamp": 1532934913955,<br>&nbsp;&nbsp;"status": 401,<br>&nbsp;&nbsp;"error": "Unauthorized",<br>&nbsp;&nbsp;"message": "Bad credentials",<br>&nbsp;&nbsp;"path": "/auth/login"<br>}      
+                                </code>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="smart-widget m-top-lg widget-dark">
+        <div class="smart-widget-header">
+            <b>How to get User's Current Balance ?</b>
+            <span class="smart-widget-option">
+                <a href="#" class="widget-toggle-hidden-option">
+                    <i class="fa fa-cog"></i>
+                </a>
+                <a href="#" class="widget-collapse-option" data-toggle="collapse">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+            </span>
+        </div>
+        <div class="smart-widget-inner text-dark">
+            <div class="smart-widget-hidden-section" style="display: none;">
+                <ul class="widget-color-list clearfix">
+                    <li style="background-color:#20232b;" data-color="widget-dark"></li>
+                    <li style="background-color:#4c5f70;" data-color="widget-dark-blue"></li>
+                    <li style="background-color:#23b7e5;" data-color="widget-blue"></li>
+                    <li style="background-color:#2baab1;" data-color="widget-green"></li>
+                    <li style="background-color:#edbc6c;" data-color="widget-yellow"></li>
+                    <li style="background-color:#fbc852;" data-color="widget-orange"></li>
+                    <li style="background-color:#e36159;" data-color="widget-red"></li>
+                    <li style="background-color:#7266ba;" data-color="widget-purple"></li>
+                    <li style="background-color:#f5f5f5;" data-color="widget-light-grey"></li>
+                    <li style="background-color:#fff;" data-color="reset"></li>
+                </ul>
+            </div>
+            <div class="smart-widget-body">
+                <h2 class="m-top-sm p-bottom-sm">Get User's Current Balance</h2>
+                <p class="font-16">Used to get user's current balance</p>
+                <h5 class="m-top-md p-bottom-sm">URL</h5>
+                <pre>{{base_url}}/api/v1/balance</pre>
+                <h5 class="m-top-md p-bottom-sm">METHOD</h5>
+                <pre>GET</pre>
+                <table class="table table-bordered font-16">
+                    <thead>
+                        <tr>
+                            <th class="col-md-1 bg-grey">Key</th>
+                            <th class="col-md-1 text-center bg-grey">Value</th>
+                            <th class="col-md-1 text-center bg-grey">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Authorization</td>
+                            <td><strong>Bearer [ACCESS_TOKEN]</strong></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h5 class="m-top-md p-bottom-sm">REQUEST PARAM</h5>
+                <table class="table table-bordered font-16">
+                    <thead>
+                        <tr>
+                            <th class="col-md-6 bg-grey">Names</th>
+                            <th class="col-md-1 text-center  bg-grey">Type</th>
+                            <th class="bg-grey">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ps_id</td>
+                            <td class="text-center">String</td>
+                            <td>GPoin User's Identity</td>
+                        </tr>
+                        <tr>
+                            <td>hash</td>
+                            <td class="text-center">String</td>
+                            <td>- Encryption of GPoin User's account using <b>Md5PasswordEncoder</b><br>- SALT = <b> Aha9yeWq4WP3zGh0eKW5l2wehwz/XRCf8CijBKcqLbNZ</b></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h5 class="m-top-md p-bottom-sm">RESPONSES</h5>
+                <table class="table table-bordered font-16">
+                    <thead>
+                        <tr>
+                            <th class="col-md-1 bg-grey">HTTP Status</th>
+                            <th class="col-md-1 bg-grey">Response Body Status Code</th>
+                            <th class="col-md-2 bg-grey">Description</th>
+                            <th class="col-md-3 bg-grey">JSON Response</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>200</td>
+                            <td><b>200</b></td>
+                            <td><strong>Success</strong></td>
+                            <td>
+                                <code>{<br>&nbsp;&nbsp;"status": 200,<br>&nbsp;&nbsp;"data": {<br>&nbsp;&nbsp;&nbsp;&nbsp;"id": 140,<br>&nbsp;&nbsp;&nbsp;&nbsp;"opening_balance": 0,<br>&nbsp;&nbsp;&nbsp;&nbsp;"total_debits": 10,<br>&nbsp;&nbsp;&nbsp;&nbsp;"total_credits": "2010",<br>&nbsp;&nbsp;&nbsp;&nbsp;"closing_balance": 2000,<br>&nbsp;&nbsp;&nbsp;&nbsp;"last_updated_time": 1497247491318<br>&nbsp;&nbsp;}<br>&nbsp;}</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>200</td>
+                            <td><b>702</b></td>
+                            <td><strong>PS ID Not Found</strong></td>
+                            <td>
+                                <code>
+                                    {<br>&nbsp;&nbsp;"status": 702,<br>&nbsp;&nbsp;"error": PS ID not found<br>}      
+                                </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>200</td>
+                            <td><b>703</b></td>
+                            <td><strong>Invalid Hash</strong></td>
+                            <td>
+                                <code>
+                                    {<br>&nbsp;&nbsp;"status": 703,<br>&nbsp;&nbsp;"error": invalid hash<br>}      
+                                </code>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="smart-widget m-top-lg widget-dark">
+        <div class="smart-widget-header">
+            <b>How to generate PSID ?</b>
+            <span class="smart-widget-option">
+                <a href="#" class="widget-toggle-hidden-option">
+                    <i class="fa fa-cog"></i>
+                </a>
+                <a href="#" class="widget-collapse-option" data-toggle="collapse">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+            </span>
+        </div>
+        <div class="smart-widget-inner text-dark">
+            <div class="smart-widget-hidden-section" style="display: none;">
+                <ul class="widget-color-list clearfix">
+                    <li style="background-color:#20232b;" data-color="widget-dark"></li>
+                    <li style="background-color:#4c5f70;" data-color="widget-dark-blue"></li>
+                    <li style="background-color:#23b7e5;" data-color="widget-blue"></li>
+                    <li style="background-color:#2baab1;" data-color="widget-green"></li>
+                    <li style="background-color:#edbc6c;" data-color="widget-yellow"></li>
+                    <li style="background-color:#fbc852;" data-color="widget-orange"></li>
+                    <li style="background-color:#e36159;" data-color="widget-red"></li>
+                    <li style="background-color:#7266ba;" data-color="widget-purple"></li>
+                    <li style="background-color:#f5f5f5;" data-color="widget-light-grey"></li>
+                    <li style="background-color:#fff;" data-color="reset"></li>
+                </ul>
+            </div>
+            <div class="smart-widget-body">
+                <h2 class="m-top-sm p-bottom-sm">Generate PSID by Social Media ID</h2>
+                <p class="font-16">Used to generate PSID for consumer who register through social media on your system, so that can use Poin System</p>
+                <h5 class="m-top-md p-bottom-sm">URL</h5>
+                <pre>{{base_url}}/api/v1/consumer/add_by_socialmedia</pre>
+                <h5 class="m-top-md p-bottom-sm">METHOD</h5>
+                <pre>POST</pre>
+                <h5 class="m-top-md p-bottom-sm">HEADERS</h5>
+                <table class="table table-bordered font-16">
+                    <thead>
+                        <tr>
+                            <th class="col-md-1 bg-grey">Key</th>
+                            <th class="col-md-1 text-center bg-grey">Value</th>
+                            <th class="col-md-1 text-center bg-grey">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Authorization</td>
+                            <td><strong>Bearer [ACCESS_TOKEN]</strong></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h5 class="m-top-md p-bottom-sm">REQUEST BODY</h5>
+                <table class="table table-bordered font-16">
+                    <thead>
+                        <tr>
+                            <th class="col-md-6 bg-grey">Names</th>
+                            <th class="col-md-1 text-center  bg-grey">Type</th>
+                            <th class="bg-grey"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>name</td>
+                            <td class="text-center">String</td>
+                            <td>The name be used to consumer.</td>
+                        </tr>
+                        <tr>
+                            <td>social_media_type</td>
+                            <td class="text-center">String</td>
+                            <td>The type of social media used by consumers that registered in your system and it is required.<br/><i>example <b>‘facebook’.</b></i></td>
+                        </tr>
+                        <tr>
+                            <td>social_media_id</td>
+                            <td class="text-center">String</td>
+                            <td>This is the id from social media owned by the consumer that registered in your system and it is required.</td>
+                        </tr>
+                        <tr>
+                            <td>email</td>
+                            <td class="text-center">String</td>
+                            <td>Consumer's Email from Social Media</td>
+                        </tr>
+                        <tr>
+                            <td>email_verification_status</td>
+                            <td class="text-center">Boolean</td>
+                            <td>Verification Status of Consumer</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="smart-widget-body">
+                <h2 class="m-top-sm p-bottom-sm">Generate PSID by Email</h2>
+                <p class="font-16">Used to generate PSID for consumer who register through email</p>
+                <h5 class="m-top-md p-bottom-sm">URL</h5>
+                <pre>{{base_url}}/api/v1/consumer/add_by_email</pre>
+                <h5 class="m-top-md p-bottom-sm">METHOD</h5>
+                <pre>POST</pre>
+                <h5 class="m-top-md p-bottom-sm">HEADERS</h5>
+                <table class="table table-bordered font-16">
+                    <thead>
+                        <tr>
+                            <th class="col-md-1 bg-grey">Key</th>
+                            <th class="col-md-1 text-center bg-grey">Value</th>
+                            <th class="col-md-1 text-center bg-grey">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Authorization</td>
+                            <td><strong>Bearer [ACCESS_TOKEN]</strong></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h5 class="m-top-md p-bottom-sm">REQUEST BODY</h5>
+                <table class="table table-bordered font-16">
+                    <thead>
+                        <tr>
+                            <th class="col-md-6 bg-grey">Names</th>
+                            <th class="col-md-1 text-center  bg-grey">Type</th>
+                            <th class="bg-grey"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>name</td>
+                            <td class="text-center">String</td>
+                            <td>The name be used to consumer.</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td class="text-center">String</td>
+                            <td>Consumer's Email</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="smart-widget m-top-lg widget-dark">
+        <div class="smart-widget-header">
+            <b>How to update User Profile ?</b>
+            <span class="smart-widget-option">
+                <a href="#" class="widget-toggle-hidden-option">
+                    <i class="fa fa-cog"></i>
+                </a>
+                <a href="#" class="widget-collapse-option" data-toggle="collapse">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+            </span>
+        </div>
+        <div class="smart-widget-inner text-dark">
+            <div class="smart-widget-hidden-section" style="display: none;">
+                <ul class="widget-color-list clearfix">
+                    <li style="background-color:#20232b;" data-color="widget-dark"></li>
+                    <li style="background-color:#4c5f70;" data-color="widget-dark-blue"></li>
+                    <li style="background-color:#23b7e5;" data-color="widget-blue"></li>
+                    <li style="background-color:#2baab1;" data-color="widget-green"></li>
+                    <li style="background-color:#edbc6c;" data-color="widget-yellow"></li>
+                    <li style="background-color:#fbc852;" data-color="widget-orange"></li>
+                    <li style="background-color:#e36159;" data-color="widget-red"></li>
+                    <li style="background-color:#7266ba;" data-color="widget-purple"></li>
+                    <li style="background-color:#f5f5f5;" data-color="widget-light-grey"></li>
+                    <li style="background-color:#fff;" data-color="reset"></li>
+                </ul>
+            </div>
+            <div class="smart-widget-body">
+                <p class="font-16">Used to make changes of the consumer profile if consumer wants to change the name and email or one of them. Changes can not be made by the consumer with unverified email address and to do it, you must be login.</p>
+                <h5 class="m-top-md p-bottom-sm">URL</h5>
+                <pre>{{base_url}}/api/v1/consumer/profile</pre>
+                <h5 class="m-top-md p-bottom-sm">METHOD</h5>
+                <pre>POST</pre>
+                <h5 class="m-top-md p-bottom-sm">HEADERS</h5>
+                <table class="table table-bordered font-16">
+                    <thead>
+                        <tr>
+                            <th class="col-md-1 bg-grey">Key</th>
+                            <th class="col-md-1 text-center bg-grey">Value</th>
+                            <th class="col-md-1 text-center bg-grey">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Authorization</td>
+                            <td><strong>Bearer [ACCESS_TOKEN]</strong></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h5 class="m-top-md p-bottom-sm">REQUEST BODY</h5>
+                <table class="table table-bordered font-16">
+                    <thead>
+                        <tr>
+                            <th class="col-md-6 bg-grey">Names</th>
+                            <th class="col-md-1 text-center  bg-grey">Type</th>
+                            <th class="bg-grey"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>name</td>
+                            <td class="text-center">String</td>
+                            <td>Set it be your name. This is an optional data,<br/>if you don&apos;t want to update the user name, you don&apos;t have to include this data in the API.</td>
+                        </tr>
+                        <tr>
+                            <td>email</td>
+                            <td class="text-center">String</td>
+                            <td>Set it be your email. This is an optional data.<br/>The updated email should verified first in your application.</b></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="smart-widget m-top-lg widget-dark">
+        <div class="smart-widget-header">
+            <b>How to add or substract balance ?</b>
+            <span class="smart-widget-option">
+                <a href="#" class="widget-toggle-hidden-option">
+                    <i class="fa fa-cog"></i>
+                </a>
+                <a href="#" class="widget-collapse-option" data-toggle="collapse">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+            </span>
+        </div>
+        <div class="smart-widget-inner text-dark">
+            <div class="smart-widget-hidden-section" style="display: none;">
+                <ul class="widget-color-list clearfix">
+                    <li style="background-color:#20232b;" data-color="widget-dark"></li>
+                    <li style="background-color:#4c5f70;" data-color="widget-dark-blue"></li>
+                    <li style="background-color:#23b7e5;" data-color="widget-blue"></li>
+                    <li style="background-color:#2baab1;" data-color="widget-green"></li>
+                    <li style="background-color:#edbc6c;" data-color="widget-yellow"></li>
+                    <li style="background-color:#fbc852;" data-color="widget-orange"></li>
+                    <li style="background-color:#e36159;" data-color="widget-red"></li>
+                    <li style="background-color:#7266ba;" data-color="widget-purple"></li>
+                    <li style="background-color:#f5f5f5;" data-color="widget-light-grey"></li>
+                    <li style="background-color:#fff;" data-color="reset"></li>
+                </ul>
+            </div>
+            <div class="smart-widget-body">
+                <h2 class="m-top-sm p-bottom-sm">Add Balance</h2>
+                <p class="font-16">Used for the addition of points, so every user get a chance to buy and redeem some rewards</p>
+                <h5 class="m-top-md p-bottom-sm">URL</h5>
+                <pre>{{base_url}}/api/v1/balance/add</pre>
+                <h5 class="m-top-md p-bottom-sm">METHOD</h5>
+                <pre>POST</pre>
+                <h5 class="m-top-md p-bottom-sm">HEADERS</h5>
+                <table class="table table-bordered font-16">
+                    <thead>
+                        <tr>
+                            <th class="col-md-1 bg-grey">Key</th>
+                            <th class="col-md-1 text-center bg-grey">Value</th>
+                            <th class="col-md-1 text-center bg-grey">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Authorization</td>
+                            <td><strong>Bearer [ACCESS_TOKEN]</strong></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h5 class="m-top-md p-bottom-sm">REQUEST BODY</h5>
+                <table class="table table-bordered font-16">
+                    <thead>
+                        <tr>
+                            <th class="col-md-6 bg-grey">Names</th>
+                            <th class="col-md-1 text-center  bg-grey">Type</th>
+                            <th class="bg-grey"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>amount</td>
+                            <td class="text-center">Integer</td>
+                            <td>Total Credit</td>
+                        </tr>
+                        <tr>
+                            <td>description</td>
+                            <td class="text-center">String</td>
+                            <td>Complementary information related to addition of points </td>
+                        </tr>
+                        <tr>
+                            <td>hash</td>
+                            <td class="text-center">String</td>
+                            <td>- Encryption of GPoin User's account using <b>Md5PasswordEncoder</b><br>- SALT = <b> Aha9yeWq4WP3zGh0eKW5l2wehwz/XRCf8CijBKcqLbNZ</b></td>
+                        </tr>
+                        <tr>
+                            <td>ps_id</td>
+                            <td class="text-center">String</td>
+                            <td>GPoin User's Identity</td>
+                        </tr>
+                        <tr>
+                            <td>activity</td>
+                            <td class="text-center">String</td>
+                            <td>Addition Point's Activity</td>
+                        </tr>
+                        <tr>
+                            <td>activity_object</td>
+                            <td class="text-center">String</td>
+                            <td>Object of Addition Point's Activity</td>
+                        </tr>
+                        <tr>
+                            <td>additional_data</td>
+                            <td class="text-center">String</td>
+                            <td>Additional Information</td>
+                        </tr>
+                        <tr>
+                            <td>object_id</td>
+                            <td class="text-center">Long</td>
+                            <td>Activity Object ID</td>
+                        </tr>
+                        <tr>
+                            <td>client_transaction_id</td>
+                            <td class="text-center">String</td>
+                            <td>Client's Transaction Identity</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h5 class="m-top-md p-bottom-sm">RESPONSES</h5>
+                <table class="table table-bordered font-16">
+                    <thead>
+                        <tr>
+                            <th class="col-md-1 bg-grey">HTTP Status</th>
+                            <th class="col-md-1 bg-grey">Response Body Status Code</th>
+                            <th class="col-md-2 bg-grey">Description</th>
+                            <th class="col-md-3 bg-grey">JSON Response</th>
+                        </tr>
+                    </thead> 
+                    <tbody>
+                        <tr>
+                            <td>200</td>
+                            <td><strong>802</strong></td>
+                            <td>Daily Points Cap Exception</td>
+                            <td>
+                                <code>{<br>&nbsp;&nbsp;"status":802,<br>&nbsp;&nbsp;"error": "Add balance reach maximum daily point cap base on client"<br>}</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>200</td>
+                            <td><strong>200</strong></td>
+                            <td>Add Balance Succeed</td>
+                            <td>
+                                <code>{<br>&nbsp;&nbsp;"status": 200,<br>&nbsp;&nbsp;"data": {<br>&nbsp;&nbsp;&nbsp;&nbsp;"transaction_id": 3783,<br>&nbsp;&nbsp;&nbsp;&nbsp;"debit": 0,<br>&nbsp;&nbsp;&nbsp;&nbsp;"credit": 10,<br>&nbsp;&nbsp;&nbsp;&nbsp;"description": "ADD_POINT_REGULAR",<br>&nbsp;&nbsp;&nbsp;&nbsp;"transaction_time": 1488783166616,<br>&nbsp;&nbsp;&nbsp;&nbsp;"trial_balance": <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"opening_balance": 0,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"total_debits": 0,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"total_credits": 10,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"closing_balance": 10<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}</code>
+                            </td>
+                        </tr>
+                    </tbody>                                   
+                </table>
+            </div>
+            <div class="smart-widget-body">
+                <h2 class="m-top-sm p-bottom-sm">Substract Balance</h2>
+                <p class="font-16">Used for the substraction of points in terms of internal client reward redemption</p>
+                <h5 class="m-top-md p-bottom-sm">URL</h5>
+                <pre>{{base_url}}/api/v1/balance/substract</pre>
+                <h5 class="m-top-md p-bottom-sm">METHOD</h5>
+                <pre>POST</pre>
+                <h5 class="m-top-md p-bottom-sm">HEADERS</h5>
+                <table class="table table-bordered font-16">
+                    <thead>
+                        <tr>
+                            <th class="col-md-1 bg-grey">Key</th>
+                            <th class="col-md-1 text-center bg-grey">Value</th>
+                            <th class="col-md-1 text-center bg-grey">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Authorization</td>
+                            <td><strong>Bearer [ACCESS_TOKEN]</strong></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h5 class="m-top-md p-bottom-sm">REQUEST BODY</h5>
+                <table class="table table-bordered font-16">
+                    <thead>
+                        <tr>
+                            <th class="col-md-6 bg-grey">Names</th>
+                            <th class="col-md-1 text-center  bg-grey">Type</th>
+                            <th class="bg-grey"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>amount</td>
+                            <td class="text-center">Integer</td>
+                            <td>Total Credit</td>
+                        </tr>
+                        <tr>
+                            <td>description</td>
+                            <td class="text-center">String</td>
+                            <td>Complementary information related to addition of points </td>
+                        </tr>
+                        <tr>
+                            <td>hash</td>
+                            <td class="text-center">String</td>
+                            <td>- Encryption of GPoin User's account using <b>Md5PasswordEncoder</b><br>- SALT = <b> Aha9yeWq4WP3zGh0eKW5l2wehwz/XRCf8CijBKcqLbNZ</b></td>
+                        </tr>
+                        <tr>
+                            <td>ps_id</td>
+                            <td class="text-center">String</td>
+                            <td>GPoin User's Identity</td>
+                        </tr>
+                        <tr>
+                            <td>activity</td>
+                            <td class="text-center">String</td>
+                            <td>Addition Point's Activity</td>
+                        </tr>
+                        <tr>
+                            <td>activity_object</td>
+                            <td class="text-center">String</td>
+                            <td>Object of Addition Point's Activity</td>
+                        </tr>
+                        <tr>
+                            <td>additional_data</td>
+                            <td class="text-center">String</td>
+                            <td>Additional Information</td>
+                        </tr>
+                        <tr>
+                            <td>object_id</td>
+                            <td class="text-center">Long</td>
+                            <td>Activity Object ID</td>
+                        </tr>
+                        <tr>
+                            <td>client_transaction_id</td>
+                            <td class="text-center">String</td>
+                            <td>Client's Transaction Identity</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="smart-widget m-top-lg widget-dark">
+        <div class="smart-widget-header">
+            <b>How to update Email Verification Status ?</b>
+            <span class="smart-widget-option">
+                <a href="#" class="widget-toggle-hidden-option">
+                    <i class="fa fa-cog"></i>
+                </a>
+                <a href="#" class="widget-collapse-option" data-toggle="collapse">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+            </span>
+        </div>
+        <div class="smart-widget-inner text-dark">
+            <div class="smart-widget-hidden-section" style="display: none;">
+                <ul class="widget-color-list clearfix">
+                    <li style="background-color:#20232b;" data-color="widget-dark"></li>
+                    <li style="background-color:#4c5f70;" data-color="widget-dark-blue"></li>
+                    <li style="background-color:#23b7e5;" data-color="widget-blue"></li>
+                    <li style="background-color:#2baab1;" data-color="widget-green"></li>
+                    <li style="background-color:#edbc6c;" data-color="widget-yellow"></li>
+                    <li style="background-color:#fbc852;" data-color="widget-orange"></li>
+                    <li style="background-color:#e36159;" data-color="widget-red"></li>
+                    <li style="background-color:#7266ba;" data-color="widget-purple"></li>
+                    <li style="background-color:#f5f5f5;" data-color="widget-light-grey"></li>
+                    <li style="background-color:#fff;" data-color="reset"></li>
+                </ul>
+            </div>
+            <div class="smart-widget-body">
+                <p class="font-16">Used to update email verification status so client users can access GPoin IFrame and doing reward activity (Buy or Redeem) </p>
+                <h5 class="m-top-md p-bottom-sm">URL</h5>
+                <pre>{{base_url}}/api/v1/consumer/notify_email_verified</pre>
+                <h5 class="m-top-md p-bottom-sm">METHOD</h5>
+                <pre>POST</pre>
+                <h5 class="m-top-md p-bottom-sm">HEADERS</h5>
+                <table class="table table-bordered font-16">
+                    <thead>
+                        <tr>
+                            <th class="col-md-1 bg-grey">Key</th>
+                            <th class="col-md-1 text-center bg-grey">Value</th>
+                            <th class="col-md-1 text-center bg-grey">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Authorization</td>
+                            <td><strong>Bearer [ACCESS_TOKEN]</strong></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h5 class="m-top-md p-bottom-sm">REQUEST BODY</h5>
+                <table class="table table-bordered font-16">
+                    <thead>
+                        <tr>
+                            <th class="col-md-6 bg-grey">Names</th>
+                            <th class="col-md-1 text-center  bg-grey">Type</th>
+                            <th class="bg-grey"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Email</td>
+                            <td class="text-center">String</td>
+                            <td>Consumer's Email</td>
+                        </tr>
+                        <tr>
+                            <td>hash</td>
+                            <td class="text-center">String</td>
+                            <td>- Encryption of GPoin User's account using <b>Md5PasswordEncoder</b><br>- SALT = <b> Aha9yeWq4WP3zGh0eKW5l2wehwz/XRCf8CijBKcqLbNZ</b></td>
+                        </tr>
+                        <tr>
+                            <td>ps_id</td>
+                            <td class="text-center">String</td>
+                            <td>GPoin User's Identity</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
